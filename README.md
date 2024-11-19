@@ -46,9 +46,7 @@ The ALI emulates a simple hardware architecture and interprets SAL programs, sup
 1. Place SAL program files (e.g., program.sal) in the project directory.
 2. Run main.rb to start the interpreter:
 
-
-    ruby main.rb
-
+`ruby main.rb`
 
 3. Use the command loop to execute the program step-by-step or in its entirety. 
 4. View program state in a user-friendly format (binary, decimal, or hexadecimal).
