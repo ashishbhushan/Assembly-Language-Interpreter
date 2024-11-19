@@ -27,15 +27,31 @@ The ALI emulates a simple hardware architecture and interprets SAL programs, sup
 * View the state of memory, registers, and the zero bit after each command.
 * Quit the command loop (q).
 
+## Project Structure
+* **main.rb:** Entry point of the program. Initializes the interpreter and handles user interactions.
+* **instructions.rb:** Contains implementation of individual SAL instructions.
+* **memory.rb:** Manages program and data memory for the ALI.
+* **registers.rb:** Handles the emulated hardware registers (A, B, PC, zero-result bit).
+* **sal_interpreter.rb:** Core logic for parsing and executing SAL programs.
+* **parser.rb:** Parses and validates SAL programs.
+* **io_handler.rb:** Handles file input/output for loading SAL programs.
+* **program.sal, program2.sal:** Sample SAL programs demonstrating the interpreter's functionality.
+
 ## Design Highlights
 * Implements the Command Design Pattern with an abstract Instruction superclass and concrete subclasses for each SAL instruction.
 * Ensures modular and reusable code by encapsulating execution logic within individual instruction classes.
 * Safeguards against infinite loops by limiting the maximum number of instructions executed.
 
 ## How to Use
-1. Input a SAL program via a file in the current directory.
-2. Use the command loop to execute the program step-by-step or in its entirety.
-3. View program state in a user-friendly format (binary, decimal, or hexadecimal).
+1. Place SAL program files (e.g., program.sal) in the project directory.
+2. Run main.rb to start the interpreter:
+
+
+    ruby main.rb
+
+
+3. Use the command loop to execute the program step-by-step or in its entirety. 
+4. View program state in a user-friendly format (binary, decimal, or hexadecimal).
 
 ## Constraints
 * Assumes SAL programs are correctly formatted.
